@@ -20,9 +20,9 @@ function Home() {
   return (
     <>
 
-      {/* <NavBar /> */}
+      <NavBar />
       <PrinterSetup/>
-      <PrinterS/>
+      {/* <PrinterS/> */}
       <SupportPage/>
       
       {/* <Technicians/>
