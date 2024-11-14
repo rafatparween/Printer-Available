@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white">
       <div className="flex gap-5 items-center py-3 justify-between">
-        <ul className="ml-[80px] flex gap-8 text-[#1C8DCE] text-[24px]">
+        <ul className="ml-[80px] flex gap-8 text-[#212121] text-[24px] 2xl:ml-[301px] xl:ml-[182px]">
           <Link legacyBehavior href="/" passHref>
             {/* <a className="hover:text-[#3730a3] p-2 rounded">Home</a> */}
             <div className="flex items-center mr-4 xl:ml-[-60px] 2xl:ml-[2px]">
@@ -54,7 +54,7 @@ const Navbar = () => {
         </ul>
         
         {/* Chatlink on the right */}
-        <div className="ml-auto">
+        <div className="ml-auto xl:mr-[135px] 2xl:mr-[322px]">
           <Chatlink />
         </div>
       </div>

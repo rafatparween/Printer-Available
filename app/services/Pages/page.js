@@ -552,6 +552,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import FooterSection from '@/app/components/FooterSection';
+import NavbarSection from '@/app/components/NavbarSection';
 
 export default function Home() {
   const router = useRouter();
@@ -611,89 +612,90 @@ export default function Home() {
 
   return (
     <>
-    <div className="container mx-auto px-4 py-8">
-      {/* Section 1 */}
-      <div className="flex flex-col md:flex-row items-center justify-between mb-16 2xl:ml-[228px] xl:ml-[125px]">
-        {/* Left Text Section */}
-        <div className="md:w-1/2 mb-6 md:mb-0 md:pr-8">
-          <h2 className="text-3xl font-bold mb-4 leading-tight">We're here to help you set up your HP printer</h2>
-          <p className="text-lg text-gray-600">
-            Let's connect your printer to a Wi-Fi or wired network or to a computer using a USB cable, but first, we need to know your printer model.
-          </p>
-        </div>
-
-        {/* Right Image Section */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          <Image src="/Landing.webp" alt="Printer" width={526} height={216} />
-        </div>
-      </div>
-
-      {/* Section 2 */}
-      <div className="w-full bg-gray-100 py-10">
-        <div className="flex flex-col md:flex-row items-center max-w-5xl mx-auto px-6 space-y-8 md:space-y-0 md:space-x-8">
+      <NavbarSection />
+      <div className="container mx-auto px-4 py-8 ">
+        {/* Section 1 */}
+        <div className="flex flex-col md:flex-row items-center justify-between mb-16 2xl:ml-[228px] xl:ml-[125px]">
           {/* Left Text Section */}
-          <div className="flex-1 text-center md:text-left space-y-4 md:pr-8">
-            <ul className="list-none space-y-2 text-gray-600">
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-gray-600 rounded-full mr-2 mt-2"></span>
-                Unpack, Setup New Printer
-              </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-gray-600 rounded-full mr-2 mt-2"></span>
-                Troubleshoot printer issues
-              </li>
-            </ul>
-            <p className="text-gray-600 w-[468px] ">Enter your serial number, product number, or product name</p>
-
-            {/* Input with Filtered Dropdown */}
-            <div className="relative mt-4">
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={handleInputChange}
-                placeholder="Example: HP DeskJet 2632 All-in-One printer"
-                className="w-full max-w-sm px-4 py-2 border border-gray-300 rounded"
-              />
-              {showDropdown && (
-                <ul className="absolute z-10 w-full max-w-sm bg-white border border-gray-300 rounded shadow-md mt-1 max-h-40 overflow-y-auto">
-                  {filteredModels.map((model, index) => (
-                    <li
-                      key={index}
-                      onClick={() => handleModelClick(model)}
-                      className="px-4 py-2 cursor-pointer hover:bg-gray-100"
-                    >
-                      {model}
-                    </li>
-                  ))}
-                </ul>
-              )}
-              <button
-                onClick={handleSubmit}
-                className="bg-[#007DBD] text-white py-2 px-4 rounded hover:bg-blue-700 mt-2"
-              >
-                Submit
-              </button>
-            </div>
+          <div className="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+            <h2 className="text-3xl font-bold mb-4 leading-tight">We're here to help you set up your HP printer</h2>
+            <p className="text-lg text-gray-600">
+              Let's connect your printer to a Wi-Fi or wired network or to a computer using a USB cable, but first, we need to know your printer model.
+            </p>
           </div>
-
-          {/* Divider */}
-          <div className="hidden md:block w-px h-[312px] bg-gray-300"></div>
 
           {/* Right Image Section */}
-          <div className="flex-1 flex justify-center md:justify-end">
-            <Image src="/NSLaser.avif" alt="Printer Example" width={526} height={314} />
+          <div className="md:w-1/2 flex justify-center md:justify-end">
+            <Image src="/Landing.webp" alt="Printer" width={526} height={216} />
           </div>
         </div>
-      </div>
 
-      {/* Footer Text Section (Left-Aligned) */}
-      <div className="text-left text-gray-700 mt-8 max-w-2xl mx-auto px-4">
-        <p className="text-[16px] leading-relaxed ml-[-162px]">
-          We’ve made it easy to download HP printer software to set up your printer. Enter your product name and we’ll get you the right printer setup software and drivers. We support all major desktop and mobile operating systems, including Windows, macOS, iOS, and Android.
-        </p>
+        {/* Section 2 */}
+        <div className="w-full bg-gray-100 py-10">
+          <div className="flex flex-col md:flex-row items-center max-w-5xl mx-auto px-6 space-y-8 md:space-y-0 md:space-x-8">
+            {/* Left Text Section */}
+            <div className="flex-1 text-center md:text-left space-y-4 md:pr-8">
+              <ul className="list-none space-y-2 text-gray-600">
+                <li className="flex items-start">
+                  <input type="radio" name="printer-options" className="form-radio w-5 h-5 text-blue-600 mr-2 mt-1" />
+                  Unpack, Setup New Printer
+                </li>
+                <li className="flex items-start">
+                  <input type="radio" name="printer-options" className="form-radio w-5 h-5 text-blue-600 mr-2 mt-1" />
+                  Troubleshoot printer issues
+                </li>
+              </ul>
+              <p className="text-gray-600 w-[468px] ">Enter your serial number, product number, or product name</p>
+
+              {/* Input with Filtered Dropdown */}
+              <div className="relative mt-4">
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={handleInputChange}
+                  placeholder="Example: HP DeskJet 2632 All-in-One printer"
+                  className="w-full max-w-sm px-4 py-2 border border-gray-300 rounded"
+                />
+                {showDropdown && (
+                  <ul className="absolute z-10 w-full max-w-sm bg-white border border-gray-300 rounded shadow-md mt-1 max-h-40 overflow-y-auto">
+                    {filteredModels.map((model, index) => (
+                      <li
+                        key={index}
+                        onClick={() => handleModelClick(model)}
+                        className="px-4 py-2 cursor-pointer hover:bg-gray-100"
+                      >
+                        {model}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <button
+                  onClick={handleSubmit}
+                  className="bg-[#007DBD] text-white py-2 px-4 rounded hover:bg-blue-700 mt-2"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="hidden md:block w-px h-[312px] bg-gray-300"></div>
+
+            {/* Right Image Section */}
+            <div className="flex-1 flex justify-center md:justify-end">
+              <Image src="/NSLaser.avif" alt="Printer Example" width={526} height={314} />
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Text Section (Left-Aligned) */}
+        <div className="text-left text-gray-700 mt-8 max-w-2xl mx-auto px-4">
+          <p className="text-[16px] leading-relaxed ml-[-162px]">
+            We’ve made it easy to download HP printer software to set up your printer. Enter your product name and we’ll get you the right printer setup software and drivers. We support all major desktop and mobile operating systems, including Windows, macOS, iOS, and Android.
+          </p>
+        </div>
       </div>
-    </div>
-    <FooterSection/>
+      <FooterSection />
     </>
   );
 }

@@ -144,7 +144,7 @@ export default function PrinterSetup() {
       {/* Bottom Section */}
       <div className="flex justify-center space-x-10 w-full max-w-5xl border-t border-gray-200 pt-6">
         <div className="flex flex-col items-center">
-          <Image src="/download.jpg" height={80} width={80} className="object-cover" />
+          <Image src="/dicon.png" height={80} width={80} className="object-cover" />
           <a href="#" className="text-[#007DBD] hover:underline mt-2">Download Drivers &gt;</a>
         </div>
         <div className="flex flex-col items-center">

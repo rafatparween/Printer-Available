@@ -13,6 +13,7 @@ import JivoChat from "./Jivochat";
 import PrinterSetup from "./services/content/PrinterSetup";
 import PrinterS from "./components/PrinterS";
 import SupportPage from "./components/SupportPage";
+import Header from "./components/Header";
 
 
 
@@ -21,6 +22,7 @@ function Home() {
     <>
 
       <NavBar />
+      <Header/>
       <PrinterSetup/>
       {/* <PrinterS/> */}
       <SupportPage/>
