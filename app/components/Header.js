@@ -106,9 +106,9 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center ">
       {/* Navigation Bar */}
-      <nav className="bg-[#007dbd] text-white w-full">
+      <nav className="bg-[#007dbd] text-white w-full mt-[-20px]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-center h-12 items-center space-x-8">
             <Link href="#" className="hover:underline">Support Home</Link>
@@ -118,8 +118,8 @@ export default function Header() {
               </Link>
               {/* Dropdown Menu */}
               <div className="absolute hidden group-hover:block bg-white text-black mt-2 shadow-lg p-2 rounded">
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Product 1</Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Product 2</Link>
+                {/* <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Product 1</Link>
+                <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Product 2</Link> */}
               </div>
             </div>
             <Link href="#" className="hover:underline">Software and Drivers</Link>
@@ -129,30 +129,31 @@ export default function Header() {
               </Link>
               {/* Dropdown Menu */}
               <div className="absolute hidden group-hover:block bg-white text-black mt-2 shadow-lg p-2 rounded">
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Diagnostics 1</Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Diagnostics 2</Link>
+                {/* <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Diagnostics 1</Link>
+                <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Diagnostics 2</Link> */}
               </div>
             </div>
             <Link href="#" className="hover:underline">Contact Us</Link>
             <Link href="#" className="hover:underline">Business Support</Link>
-            <div className="relative group">
+            <Link href="#" className="hover:underline">Security Bulletins</Link>
+            {/* <div className="relative group">
               <Link href="#" className="hover:underline flex items-center">
                 My HP Account <span className="ml-1">▼</span>
-              </Link>
+              </Link> */}
               {/* Dropdown Menu */}
-              <div className="absolute hidden group-hover:block bg-white text-black mt-2 shadow-lg p-2 rounded">
+              {/* <div className="absolute hidden group-hover:block bg-white text-black mt-2 shadow-lg p-2 rounded">
                 <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Account 1</Link>
                 <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Account 2</Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>
 
       {/* Content Section */}
-      <div className="border-t border-gray-300 my-4 w-full"></div>
-      <div className="flex items-center justify-between max-w-7xl w-full mx-auto p-4 ">
-        <h1 className="text-3xl 2xl:ml-[133px] xl:ml-[124px]">HP Computer Support</h1>
+      <div className="border-t border-gray-300 my-4 w-full mt-[4px]"></div>
+      <div className="flex items-center justify-between max-w-7xl w-full mx-auto ">
+        <h1 className="text-3xl 2xl:ml-[133px] xl:ml-[124px]">HP Printer Support</h1>
         <Image
           src="/smarthp.webp" // Replace with the actual path to your image
           alt="HP Computer"
@@ -161,7 +162,7 @@ export default function Header() {
           className="object-cover 2xl:mr-[94px] xl:mr-[101px] "
         />
       </div>
-      <div className="border-t border-gray-300 my-4 w-full"></div>
+      <div className="border-t border-gray-300 my-4 w-full mt-[10px]"></div>
     </div>
   );
 }

@@ -111,7 +111,7 @@ export default function PrinterSetup() {
   };
 
   return (
-    <div className="flex flex-col items-center py-10 space-y-10">
+    <div className="flex flex-col items-center py-10 space-y-10 mt-[-33px]">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8 w-full max-w-5xl p-6 border border-gray-200 rounded-lg shadow-sm">
         {/* Image Section */}
