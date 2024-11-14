@@ -613,7 +613,7 @@ export default function Home() {
   return (
     <>
       <NavbarSection />
-      <div className="container mx-auto px-4 py-8 ">
+        <div className="container mx-auto px-4 py-8 ">
         {/* Section 1 */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-16 2xl:ml-[228px] xl:ml-[125px]">
           {/* Left Text Section */}
@@ -695,7 +695,9 @@ export default function Home() {
           </p>
         </div>
       </div>
+     
       <FooterSection />
+     
     </>
   );
 }
