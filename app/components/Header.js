@@ -111,41 +111,16 @@ export default function Header() {
       <nav className="bg-[#007dbd] text-white w-full mt-[-20px]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-center h-12 items-center space-x-8">
-            <Link href="#" className="hover:underline">Support Home</Link>
-            <div className="relative group">
-              <Link href="#" className="hover:underline flex items-center">
-                Products <span className="ml-1">▼</span>
-              </Link>
-              {/* Dropdown Menu */}
-              <div className="absolute hidden group-hover:block bg-white text-black mt-2 shadow-lg p-2 rounded">
-                {/* <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Product 1</Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Product 2</Link> */}
-              </div>
-            </div>
-            <Link href="#" className="hover:underline">Software and Drivers</Link>
-            <div className="relative group">
-              <Link href="#" className="hover:underline flex items-center">
-                Diagnostics <span className="ml-1">▼</span>
-              </Link>
-              {/* Dropdown Menu */}
-              <div className="absolute hidden group-hover:block bg-white text-black mt-2 shadow-lg p-2 rounded">
-                {/* <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Diagnostics 1</Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Diagnostics 2</Link> */}
-              </div>
-            </div>
-            <Link href="#" className="hover:underline">Contact Us</Link>
-            <Link href="#" className="hover:underline">Business Support</Link>
-            <Link href="#" className="hover:underline">Security Bulletins</Link>
-            {/* <div className="relative group">
-              <Link href="#" className="hover:underline flex items-center">
-                My HP Account <span className="ml-1">▼</span>
-              </Link> */}
-              {/* Dropdown Menu */}
-              {/* <div className="absolute hidden group-hover:block bg-white text-black mt-2 shadow-lg p-2 rounded">
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Account 1</Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-200">Account 2</Link>
-              </div>
-            </div> */}
+          <Link href="offline" className="">Printer Offline</Link>
+            <Link href="printer" className="">Printer Setup</Link>
+            <Link href="scanner" className="">Scanner Setup</Link>
+            <Link href="support" className="">Support Home</Link>
+            <Link href="software" className="">Software and Drivers</Link>
+            <Link href="diagnostics" className="">Diagnostics</Link>
+            <Link href="business" className="">Business Support</Link>
+            
+            
+            
           </div>
         </div>
       </nav>
