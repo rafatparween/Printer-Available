@@ -215,6 +215,7 @@ import Image from "next/image";  // Make sure to import Image from Next.js
 import NavbarSection from "@/app/components/NavbarSection";
 import FooterSection from "@/app/components/FooterSection";
 import Storepage from "@/app/components/Storepage";
+import JivoChat from "@/app/Jivochat";
 
 function Printersearch() {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -388,6 +389,7 @@ function Printersearch() {
       )}
       <Storepage/>
       <FooterSection/>
+      <JivoChat/>
     </>
   );
 }
