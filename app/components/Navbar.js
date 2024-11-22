@@ -39,7 +39,7 @@ const Navbar = () => {
         </div>
             
           </Link>
-          <Link legacyBehavior href="/offline" passHref>
+          {/* <Link legacyBehavior href="/offline" passHref>
             <a className="hover:text-[#3730a3] p-2 rounded">Printer Offline</a>
           </Link>
           <Link legacyBehavior href="/printer" passHref>
@@ -47,7 +47,7 @@ const Navbar = () => {
           </Link>
           <Link legacyBehavior href="/scanner" passHref>
             <a className="hover:text-[#3730a3] p-2 rounded">Scanner Setup</a>
-          </Link>
+          </Link> */}
           {/* <Link legacyBehavior href="/privacypolicy" passHref>
             <a className="hover:text-[#3730a3] p-2 rounded">Privacy Policy</a>
           </Link> */}

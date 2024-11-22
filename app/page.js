@@ -21,7 +21,7 @@ import JivoChat from "./Jivochat";
 function Home() {
   return (
     <>
-      {/* <Navbar/> */}
+      <Navbar/>
       <Header/>
       <PrinterSetup/>
       {/* <PrinterS/> */}
